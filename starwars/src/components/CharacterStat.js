@@ -2,19 +2,22 @@ import React from 'react';
 import './StarWars.css';
 
 const CharacterStat = ({ Characters }) => {
-    const { name, birth_year, gender } = Characters;
+    const { name, birth_year, gender, films } = Characters;
     return(
     <div className="character__stat">
-    {/* <div><img src={}/></div> */}
-        <p>{name}</p>
-        <p>{birth_year}</p>
-        <p>{gender}</p>
+    
+        <p>Name: {name}</p>
+        <p>DOB: {birth_year}</p>
+        <p>Gender: {gender}</p>
+        <div className="movies">
         <h4>Movies</h4>
-        {/* {films.map(movie =>{
-            return <ol><li>{movie}</li></ol>
+        <ol>
+        {films.map((movie,index) =>{
+            return <li key={index}>{movie}</li>
         })
-        return <ol>{movie}</ol>
-        } */}
+        }
+        </ol>
+        </div>
     </div>
     );
 }
