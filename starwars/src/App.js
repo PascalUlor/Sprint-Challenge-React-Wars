@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import StarWars from './components/StarWars'
 import './App.css';
 
 class App extends Component {
@@ -31,16 +32,20 @@ class App extends Component {
 
   render() {
     const { starwarsChars } = this.state
-
-    const result = starwarsChars.map((entry, index) => {
-      console.log(entry);
-      return <li key={index}>{entry.name}</li>
-    })
+    console.log('************',starwarsChars);
+    // const result = starwarsChars.map((entry, index) => {
+    //   console.log(entry);
+    //   return <li key={index}>{entry.name}</li>
+    // })
 
     return (
       <div className="App">
         <h1 className="Header">React Wars</h1>
-        <ul>{result}</ul>
+        {/* <ul>{result}</ul> */}
+        <div className="card__container">
+        <StarWars starwarsChars={starwarsChars}/>
+        </div>
+        
       </div>
     );
   }
