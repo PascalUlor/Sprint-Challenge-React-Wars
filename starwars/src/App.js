@@ -51,7 +51,7 @@ class App extends Component {
   }
 
   render() {
-    const { starwarsChars } = this.state
+    const { starwarsChars, next, previous } = this.state
     
 
     return (
@@ -60,8 +60,16 @@ class App extends Component {
         <div className="card__container">
         <StarWars starwarsChars={starwarsChars}/>
         </div>
-        <Pagination text="previous" prevPage={this.prevPage}/>
-        <Pagination text="next" nextPage={this.nextPage}/>
+        <Pagination
+        text="previous"
+        next={next}
+        prev={previous}
+        prevPage={this.prevPage}/>
+        <Pagination
+        text="next" 
+        next={next}
+        prev={previous}
+        nextPage={this.nextPage}/>
       </div>
     );
   }
