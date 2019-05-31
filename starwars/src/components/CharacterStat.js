@@ -9,6 +9,12 @@ const CharacterStat = ({ Characters }) => {
         <p>{name}</p>
         <p>{birth_year}</p>
         <p>{gender}</p>
+        <h4>Movies</h4>
+        {/* {films.map(movie =>{
+            return <ol><li>{movie}</li></ol>
+        })
+        return <ol>{movie}</ol>
+        } */}
     </div>
     );
 }
