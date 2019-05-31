@@ -3,12 +3,11 @@ import CharacrterStat from './CharacterStat';
 import './StarWars.css';
 
 const StarWars = ({ starwarsChars }) => {
-    // const { results } =props
     console.log(starwarsChars);
 
-    const data = starwarsChars.map((entry, index) => {
+    const data = starwarsChars.map((entry) => {
         console.log(entry);
-        return <CharacrterStat Characters={entry} />
+        return <CharacrterStat key={entry.created} Characters={entry} />
     })
     return data;
 }
